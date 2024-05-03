@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>codenoms |
+            {% block subtitle %}{% endblock %}
+        </title>
+    </head>
+    <body>
+        {% include 'codenoms/header.html' %}
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        {% include 'codenoms/footer.html' %}
+    </body>
+</html>

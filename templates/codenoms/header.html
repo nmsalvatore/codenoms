@@ -1,0 +1,13 @@
+<header>
+    <a href="/">code_noms</a>
+    <nav>
+        {% if user.is_superuser %}
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+
+            <form action="{% url 'logout' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Log out</button>
+            </form>
+        {% endif %}
+    </nav>
+</header>
