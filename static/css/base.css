@@ -89,7 +89,8 @@ a {
     color: var(--color-link);
 }
 
-ul {
+ul,
+ol {
     margin-top: var(--space-sm);
     margin-bottom: var(--space-sm);
     margin-left: 1rem;
