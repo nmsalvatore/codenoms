@@ -1,6 +1,8 @@
 {% extends 'codenoms/base.html' %}
 {% load static %}
 
+{% block subtitle %}new post{% endblock %}
+
 {% block content %}
     <form id="new_post_form" method="POST">
         {% csrf_token %}

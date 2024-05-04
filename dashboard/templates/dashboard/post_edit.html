@@ -1,6 +1,8 @@
 {% extends 'codenoms/base.html' %}
 {% load static %}
 
+{% block subtitle %}editing '{{ post.title|lower }}'{% endblock %}
+
 {% block content %}
     <form id="edit_post_form" method="POST">
         {% csrf_token %}

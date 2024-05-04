@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="{% static 'css/hljs.css' %}">
 {% endblock stylesheets %}
 
+{% block subtitle %}{{ post.title|lower }}{% endblock %}
+
 {% block scripts %}
     <script src="{% static 'js/hljs.bundle.js' %}"></script>
 {% endblock scripts %}
