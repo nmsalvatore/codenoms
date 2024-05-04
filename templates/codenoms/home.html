@@ -3,22 +3,20 @@
 {% block subtitle %}hey.{% endblock %}
 
 {% block content %}
-    <div class="home">
-        <h1>Hey.</h1>
-        <p>
-            I wanted a place to reflect on things that I'm learning, so I decided to build this mini-blog. It's pretty simple, but I think I like it. Uh, yeah.
-        </p>
-        <p>
-            If you want to clone it, you can do so at <a href="/">this link that doesn't exist yet.</a>
-        </p>
-        <p>Here are some of my recent posts.</p>
-        <ul>
-            {% for post in posts %}
-                <li>
-                    <span>{{ post.updated_on|date:"M d" }}</span>
-                    <a href="{% url 'post_detail' slug=post.slug %}">{{ post }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+    <h1>Hey.</h1>
+    <p>
+        I wanted a place to reflect on things that I'm learning, so I decided to build this mini-blog. It's pretty simple, but I think I like it. Uh, yeah.
+    </p>
+    <p>
+        If you want to clone it, you can do so at <a href="/">this link that doesn't exist yet.</a>
+    </p>
+    <p>Here are some of my recent posts.</p>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <span>{{ post.updated_on|date:"M d" }}</span>
+                <a href="{% url 'post_detail' slug=post.slug %}">{{ post }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
