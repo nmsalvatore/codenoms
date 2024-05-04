@@ -1,6 +1,7 @@
 <header>
     <a href="/">code_noms</a>
     <nav>
+        <a href="{% url 'post_list' %}">All Posts</a>
         {% if user.is_superuser %}
             <a href="{% url 'dashboard' %}">Dashboard</a>
 

@@ -3,14 +3,12 @@
 {% block subtitle %}all posts{% endblock %}
 
 {% block content %}
-    <div class="home">
-        <ul>
-            {% for post in posts %}
-                <li>
-                    <span>{{ post.updated_on|date:"M d" }}</span>
-                    <a href="{% url 'post_detail' slug=post.slug %}">{{ post }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <span>{{ post.updated_on|date:"M d" }}</span>
+                <a href="{% url 'post_detail' slug=post.slug %}">{{ post }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock content %}
