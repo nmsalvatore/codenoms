@@ -95,8 +95,7 @@ ul {
     margin-left: 1rem;
 }
 
-.home ul li::before,
-.dashboard ul li::before {
+ul li:not(article li):not(form li)::before {
     content: "•";
     color: #bfbfbf;
     position: absolute;
@@ -104,15 +103,13 @@ ul {
     top: -1px;
 }
 
-.home ul li,
-.dashboard ul li {
+ul li:not(article li):not(form li) {
     display: grid;
     grid-template-columns: 7ch 1fr;
     position: relative;
 }
 
-.home ul li > span,
-.dashboard ul li > span {
+ul li > span:not(article span):not(form span) {
     color: #666;
 }
 
