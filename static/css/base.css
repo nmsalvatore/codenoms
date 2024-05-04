@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --space-xs: 0.625rem;
+    --space-sm: 1.25rem;
+    --space-md: 2.5rem;
+    --space-lg: 3.75rem;
+    --space-xl: 5rem;
+
+    --color-primary: #0f0f0f;
+    --color-accent: #e27474;
+    --color-link: #8e8e8e;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    color: var(--color-primary);
+    line-height: 1.5;
+}
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+}
+
+input:not(#login_form input) {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+.container {
+    width: 720px;
+    margin: var(--space-lg) auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+}
+
+header > a {
+    text-decoration: none;
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav > form > button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: var(--color-link);
+}
+
+header nav > a {
+    margin-right: var(--space-sm);
+}
+
+a {
+    color: var(--color-link);
+}
+
+ul {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    margin-left: 1rem;
+}
+
+.home ul li::before,
+.dashboard ul li::before {
+    content: "•";
+    color: #bfbfbf;
+    position: absolute;
+    left: -1rem;
+    top: -1px;
+}
+
+.home ul li,
+.dashboard ul li {
+    display: grid;
+    grid-template-columns: 7ch 1fr;
+    position: relative;
+}
+
+.home ul li > span,
+.dashboard ul li > span {
+    color: #666;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.1rem;
+}
+
+p:not(li > p) {
+    margin-bottom: var(--space-sm);
+}
+
+input#id_title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+a.new-post {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.tiptap:focus {
+    outline: none;
+}
+
+.tiptap {
+    margin: 1rem 0 128px 0;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+    color: #aaa;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
+
+.tiptap pre:has(code) {
+    margin: 1rem 0;
+}

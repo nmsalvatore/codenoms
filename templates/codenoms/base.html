@@ -1,17 +1,24 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block stylesheets %}{% endblock %}
+        {% block scripts %}{% endblock %}
         <title>codenoms |
             {% block subtitle %}{% endblock %}
         </title>
     </head>
     <body>
-        {% include 'codenoms/header.html' %}
-        <main>
-            {% block content %}{% endblock %}
-        </main>
-        {% include 'codenoms/footer.html' %}
+        <div class="container">
+            {% include 'codenoms/header.html' %}
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+            {% include 'codenoms/footer.html' %}
+        </div>
     </body>
 </html>

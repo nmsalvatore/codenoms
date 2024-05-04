@@ -1,0 +1,17 @@
+{% extends 'codenoms/base.html' %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/hljs.css' %}">
+{% endblock stylesheets %}
+
+{% block scripts %}
+    <script src="{% static 'js/hljs.bundle.js' %}"></script>
+{% endblock scripts %}
+
+{% block content %}
+    <article>
+        <h1 class="title">{{ post.title }}</h1>
+        <div class="content">{{ post.content|safe }}</div>
+    </article>
+{% endblock content %}

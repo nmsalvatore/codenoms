@@ -1,0 +1,20 @@
+{% extends 'codenoms/base.html' %}
+{% load static %}
+
+{% block content %}
+    <form id="edit_post_form" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="tiptap-editor"></div>
+        <input type="hidden" name="content" id="tiptap_content">
+        <div class="button">
+            <button type="submit">Update</button>
+            <a href="{% url 'post_delete' slug=post.slug %}">Delete</a>
+        </div>
+    </form>
+{% endblock content %}
+
+{% block scripts %}
+    <script>const postContent = '{{ post.content|escapejs }}'</script>
+    <script src="{% static 'js/tiptap.bundle.js' %}"></script>
+{% endblock scripts %}

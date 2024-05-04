@@ -1,12 +1,15 @@
 {% extends 'codenoms/base.html' %}
 
 {% block content %}
-    <div class="home">
+    <h1>Admin Dashboard</h1>
+    <div class="dashboard content">
+        <a class="new-post" href="{% url 'post_new' %}">Create New Post</a>
+        <p>Here's all your posts from ever.</p>
         <ul>
             {% for post in posts %}
                 <li>
                     <span>{{ post.updated_on|date:"M d" }}</span>
-                    <a href="{% url 'post_detail' slug=post.slug %}">{{ post }}</a>
+                    <a href="{% url 'post_edit' slug=post.slug %}">{{ post }}</a>
                 </li>
             {% endfor %}
         </ul>
