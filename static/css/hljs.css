@@ -3,7 +3,7 @@ pre code.hljs {
     overflow-x: auto;
     padding: 1em;
     border-radius: 2px;
-    border: 1px solid #e4e4e4;
+    border: 1px solid #eee;
     font-size: 0.9rem;
     margin: var(--space-md) 0;
 }

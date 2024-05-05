@@ -152,6 +152,14 @@ a.new-post {
     margin-bottom: 1rem;
 }
 
+code:not(pre code) {
+    background: #fafafa;
+    padding: 2px 4px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    color: #464646;
+}
+
 .tiptap:focus {
     outline: none;
 }
